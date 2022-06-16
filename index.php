@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style/index.css">
+	<link rel="stylesheet" type="text/css" href="../style/index.css">
 </head>
 <body>
 	<main>
@@ -23,7 +23,7 @@
 				</div>
 				<div class="input-block">
 					<span>E-mail</span>
-					<input type="text" name="email">
+					<input type="mail" name="email">
 				</div>
 				<div class="input-block">
 					<span>Телефон</span>
@@ -39,13 +39,48 @@
 				</div>
 				<div class="input-block">
 					<span>Фото</span>
-					<input type="file" name="photo" accept=".jpg,.jpeg,.png">
+					<input id ="photo"type="file" name="photo" accept=".jpg,.jpeg,.png">
 				</div>
 				<div class="input-block">
 					<input type="submit" name="send" value ="Добавить">
 				</div>
 			</form>
 		</div>
-	</main>
+
+		<div class="find-user-block">
+			<h3>Поиск записи по фамилии</h3>
+			<form enctype="multipart/form-data" name ="findUser" method="POST" action="../server/findUser.php">
+				<div class="input-block">
+					<input type="text" name="surname">
+				</div>
+				<div class="input-block">
+					<input type="submit" name="send" value="Найти">
+				</div>
+			</form>
+		</div>
+		<div class="find-user-block">
+			<h3>Поиск записи по фамилии для изменения</h3>
+			<form enctype="multipart/form-data" name ="findUser" method="POST" action="../server/EditData.php">
+				<div class="input-block">
+					<input type="text" name="surname">
+				</div>
+				<div class="input-block">
+					<input type="submit" name="send" value="Найти">
+				</div>
+			</form>
+		</div>
+		<div class="find-user-block">
+			<h3>Поиск записи по фамилии для удаления</h3>
+			<form enctype="multipart/form-data" name ="findUser" method="POST" action="../server/RemoveFromBd.php">
+				<div class="input-block">
+					<input type="text" name="surname">
+				</div>
+				<div class="input-block">
+					<input type="submit" name="send" value="Найти">
+				</div>
+			</form>
+		</div>
+	</div>
+</main>
 </body>
 </html>
